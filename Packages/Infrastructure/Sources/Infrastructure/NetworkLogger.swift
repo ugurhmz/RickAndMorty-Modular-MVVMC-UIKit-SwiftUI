@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-public final class NetworkLogger: EventMonitor {
+public final class NetworkLogger: EventMonitor, @unchecked Sendable{
     
     public let queue = DispatchQueue(label: "network.logger.queue")
     

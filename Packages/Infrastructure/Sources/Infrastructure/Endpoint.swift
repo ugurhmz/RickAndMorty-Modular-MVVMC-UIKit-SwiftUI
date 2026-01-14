@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol Endpoint {
+public protocol Endpoint: Sendable {
     var baseURL: String { get }
     var path: String { get }
     var method: RequestMethod { get }
@@ -21,17 +21,9 @@ public extension Endpoint {
     }
     
     var headers: [String: String]? {
-        [
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        ]
+        ["Content-Type": "application/json", "Accept": "application/json"]
     }
     
-    var method: RequestMethod {
-        return .get
-    }
-    
-    var task: NetworkTask {
-        return .requestPlain
-    }
+    var method: RequestMethod { .get }
+    var task: NetworkTask { .requestPlain }
 }

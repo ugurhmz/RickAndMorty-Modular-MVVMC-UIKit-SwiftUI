@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum NetworkError: Error {
+public enum NetworkError: Error, Sendable {
     
     // MARK: - Request Errors
     case invalidURL
@@ -36,7 +36,6 @@ public enum NetworkError: Error {
     case sslError
     case unknown(Error?)
 }
-
 
 public extension NetworkError {
     
