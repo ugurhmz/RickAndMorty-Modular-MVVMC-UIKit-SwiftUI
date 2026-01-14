@@ -24,3 +24,11 @@ public struct Character: Decodable, Identifiable, Sendable {
         self.image = image
     }
 }
+
+public struct CharahcterResponse: Decodable, Sendable {
+    public let results: [Character]
+    
+    public init(results: [Character]) {
+        self.results = results
+    }
+}
