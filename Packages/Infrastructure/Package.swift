@@ -11,7 +11,9 @@ let package = Package(
     products: [
         .library(
             name: "Infrastructure",
-            targets: ["Infrastructure"]),
+            type: .static,
+            targets: ["Infrastructure"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.11.0")
