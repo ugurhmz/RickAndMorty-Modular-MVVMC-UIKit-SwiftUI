@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		1F47D7962F1744C400241B8C /* RickAndMortyHybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyHybrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F47D7AE2F17484D00241B8C /* Infrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Infrastructure; path = Packages/Infrastructure; sourceTree = "<group>"; };
+		1F47D7AF2F1765D300241B8C /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = Packages/Core; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +47,7 @@
 		1F47D78D2F1744C400241B8C = {
 			isa = PBXGroup;
 			children = (
+				1F47D7AF2F1765D300241B8C /* Core */,
 				1F47D7AE2F17484D00241B8C /* Infrastructure */,
 				1F47D7982F1744C400241B8C /* RickAndMortyHybrid */,
 				1F47D7972F1744C400241B8C /* Products */,
