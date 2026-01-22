@@ -45,6 +45,67 @@ graph TD;
     end
 ```
 
+<br>
+<br>
+
+## 📂 Project Structure
+
+The project follows a strictly modular structure using local Swift Packages.
+
+```text
+RickAndMortyHybrid
+├── Packages/                          # Modular Layers (SPM)
+│   ├── Domain/                        # Pure Swift - Business Logic
+│   │   ├── Sources/
+│   │   │   ├── Character.swift
+│   │   │   └── CharacterRepositoryProtocol.swift
+│   │   └── Tests/
+│   │
+│   ├── Data/                          # Data Access Layer
+│   │   ├── Sources/
+│   │   │   ├── CharacterRepository.swift
+│   │   │   └── CharactersEndpoint.swift
+│   │   └── Tests/
+│   │
+│   ├── Infrastructure/                # Low-Level Networking & Tools
+│   │   ├── Sources/
+│   │   │   ├── NetworkManager.swift
+│   │   │   ├── NetworkLogger.swift
+│   │   │   ├── NetworkError.swift
+│   │   │   ├── Endpoint.swift
+│   │   │   └── NetworkTypes.swift
+│   │   └── Tests/
+│   │       └── InfrastructureTests.swift
+│   │
+│   ├── Core/                          # DI & Shared Helpers
+│   │   ├── Sources/
+│   │   │   ├── ServiceLocator.swift
+│   │   │   ├── Inject.swift
+│   │   │   └── Coordinator.swift
+│   │   └── Tests/
+│   │
+│   └── FeatureHome/                   # UI & Presentation Layer
+│       └── Sources/
+│           ├── HomeView.swift
+│           ├── HomeViewModel.swift
+│           ├── HomeViewState.swift
+│           └── CharacterDetailView.swift
+│
+├── RickAndMortyHybrid/                # Main Application Target
+│   ├── AppConfigurator.swift          # Dependency Graph Setup
+│   ├── AppCoordinator.swift           # Root Navigation Logic
+│   ├── AppDelegate.swift
+│   ├── SceneDelegate.swift
+│   ├── Assets.xcassets
+│   └── Info.plist
+│
+└── RickAndMortyHybridUITests/         # UI Automation Tests
+    └── FeatureHomeUITests.swift       # Scroll & Navigation Tests
+```
+
+<br>
+<br>
+
 * **📱 App Target:** Sadece `AppCoordinator` ve bağımlılık konfigürasyonunu (`AppConfigurator`) içerir.
 * **📦 FeatureHome:** UI (SwiftUI Görünümleri) ve Sunum Mantığını (ViewModels) içerir.
 * **🧠 Domain:** Uygulamanın kalbidir. Varlıklar (Entities), Kullanım Durumları (Use Cases) ve Repository Protokollerini içeren saf Swift kodu. Dış bağımlılık içermez.
