@@ -25,7 +25,7 @@ public struct Character: Decodable, Identifiable, Sendable {
     }
 }
 
-public struct CharahcterResponse: Decodable, Sendable {
+public struct CharacterResponse: Decodable, Sendable {
     public let results: [Character]
     
     public init(results: [Character]) {
