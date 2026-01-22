@@ -14,6 +14,16 @@
 		1FD9214C2F223F9700E334F4 /* Infrastructure in Frameworks */ = {isa = PBXBuildFile; productRef = 1FD9214B2F223F9700E334F4 /* Infrastructure */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1FD9215D2F22A89400E334F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F47D78E2F1744C400241B8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F47D7952F1744C400241B8C;
+			remoteInfo = RickAndMortyHybrid;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1F47D7962F1744C400241B8C /* RickAndMortyHybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyHybrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F47D7AE2F17484D00241B8C /* Infrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Infrastructure; path = Packages/Infrastructure; sourceTree = "<group>"; };
@@ -21,6 +31,8 @@
 		1F47D7B02F176AAB00241B8C /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = Packages/Data; sourceTree = "<group>"; };
 		1F47D7B22F176BB700241B8C /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Domain; path = Packages/Domain; sourceTree = "<group>"; };
 		1FD921412F223B7C00E334F4 /* FeatureHome */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FeatureHome; path = Packages/FeatureHome; sourceTree = "<group>"; };
+		1FD921572F22A89400E334F4 /* RickAndMortyHybridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyHybridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD921622F22A9AE00E334F4 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = TestPlan.xctestplan; path = RickAndMortyHybridUITests/TestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -42,6 +54,11 @@
 			path = RickAndMortyHybrid;
 			sourceTree = "<group>";
 		};
+		1FD921582F22A89400E334F4 /* RickAndMortyHybridUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RickAndMortyHybridUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,18 +74,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FD921542F22A89400E334F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1F47D78D2F1744C400241B8C = {
 			isa = PBXGroup;
 			children = (
+				1FD921622F22A9AE00E334F4 /* TestPlan.xctestplan */,
 				1FD921412F223B7C00E334F4 /* FeatureHome */,
 				1F47D7B22F176BB700241B8C /* Domain */,
 				1F47D7B02F176AAB00241B8C /* Data */,
 				1F47D7AF2F1765D300241B8C /* Core */,
 				1F47D7AE2F17484D00241B8C /* Infrastructure */,
 				1F47D7982F1744C400241B8C /* RickAndMortyHybrid */,
+				1FD921582F22A89400E334F4 /* RickAndMortyHybridUITests */,
 				1FD921422F223F9700E334F4 /* Frameworks */,
 				1F47D7972F1744C400241B8C /* Products */,
 			);
@@ -78,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1F47D7962F1744C400241B8C /* RickAndMortyHybrid.app */,
+				1FD921572F22A89400E334F4 /* RickAndMortyHybridUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +146,29 @@
 			productReference = 1F47D7962F1744C400241B8C /* RickAndMortyHybrid.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1FD921562F22A89400E334F4 /* RickAndMortyHybridUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD9215F2F22A89400E334F4 /* Build configuration list for PBXNativeTarget "RickAndMortyHybridUITests" */;
+			buildPhases = (
+				1FD921532F22A89400E334F4 /* Sources */,
+				1FD921542F22A89400E334F4 /* Frameworks */,
+				1FD921552F22A89400E334F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FD9215E2F22A89400E334F4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FD921582F22A89400E334F4 /* RickAndMortyHybridUITests */,
+			);
+			name = RickAndMortyHybridUITests;
+			packageProductDependencies = (
+			);
+			productName = RickAndMortyHybridUITests;
+			productReference = 1FD921572F22A89400E334F4 /* RickAndMortyHybridUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,6 +181,10 @@
 				TargetAttributes = {
 					1F47D7952F1744C400241B8C = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					1FD921562F22A89400E334F4 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 1F47D7952F1744C400241B8C;
 					};
 				};
 			};
@@ -149,12 +203,20 @@
 			projectRoot = "";
 			targets = (
 				1F47D7952F1744C400241B8C /* RickAndMortyHybrid */,
+				1FD921562F22A89400E334F4 /* RickAndMortyHybridUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1F47D7942F1744C400241B8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD921552F22A89400E334F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -171,7 +233,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FD921532F22A89400E334F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FD9215E2F22A89400E334F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F47D7952F1744C400241B8C /* RickAndMortyHybrid */;
+			targetProxy = 1FD9215D2F22A89400E334F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1F47D7AA2F1744C500241B8C /* Debug */ = {
@@ -353,6 +430,42 @@
 			};
 			name = Release;
 		};
+		1FD921602F22A89400E334F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFWJUABSS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugurhmz.RickAndMortyHybridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RickAndMortyHybrid;
+			};
+			name = Debug;
+		};
+		1FD921612F22A89400E334F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFWJUABSS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugurhmz.RickAndMortyHybridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RickAndMortyHybrid;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -370,6 +483,15 @@
 			buildConfigurations = (
 				1F47D7AA2F1744C500241B8C /* Debug */,
 				1F47D7AB2F1744C500241B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD9215F2F22A89400E334F4 /* Build configuration list for PBXNativeTarget "RickAndMortyHybridUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD921602F22A89400E334F4 /* Debug */,
+				1FD921612F22A89400E334F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

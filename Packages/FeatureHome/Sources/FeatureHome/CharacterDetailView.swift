@@ -31,7 +31,9 @@ public struct CharacterDetailView: View {
                     .font(.largeTitle)
                     .bold()
                     .padding()
+                    .accessibilityIdentifier("detail_character_name")
             }
         }
+        .accessibilityIdentifier("detail_view")
     }
 }

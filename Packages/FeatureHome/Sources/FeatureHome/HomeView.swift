@@ -23,6 +23,7 @@ public struct HomeView: View {
             case .loading:
                 ProgressView("Loading...")
                     .scaleEffect(1.7)
+                    .accessibilityIdentifier("loading_indicator")
             case .success(let characters):
                 List(characters) { character in
                     Button {
@@ -46,8 +47,10 @@ public struct HomeView: View {
                                 .foregroundStyle(.gray)
                         }
                     }
+                    .accessibilityIdentifier("row_\(character.name)")
                 }
                 .listStyle(.plain)
+                .accessibilityIdentifier("character_list")
             case .failure(let error):
                 Text(error).foregroundStyle(.red)
             }
