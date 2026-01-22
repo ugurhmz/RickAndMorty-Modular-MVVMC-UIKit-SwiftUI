@@ -8,6 +8,7 @@
 import Foundation
 import Domain
 import Core
+import SwiftUI
 
 @MainActor
 public final class HomeViewModel: ObservableObject {
@@ -32,6 +33,27 @@ public final class HomeViewModel: ObservableObject {
             } catch {
                 state = .failure(error.localizedDescription)
             }
+        }
+    }
+}
+
+extension CharacterStatusType {
+    var color: Color {
+        switch self {
+        case .alive:
+            return .green
+        case .dead:
+            return .red
+        case .unknown:
+            return .gray
+        }
+    }
+    
+    var iconName: String {
+        switch self {
+        case .alive: return "heart.fill"
+        case .dead: return "heart.slash.fill"
+        case .unknown: return "questionmark.circle"
         }
     }
 }
