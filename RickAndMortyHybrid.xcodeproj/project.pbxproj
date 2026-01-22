@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1FD921442F223F9700E334F4 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 1FD921432F223F9700E334F4 /* Core */; };
+		1FD921462F223F9700E334F4 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1FD921452F223F9700E334F4 /* Data */; };
+		1FD921482F223F9700E334F4 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 1FD921472F223F9700E334F4 /* Domain */; };
+		1FD9214A2F223F9700E334F4 /* FeatureHome in Frameworks */ = {isa = PBXBuildFile; productRef = 1FD921492F223F9700E334F4 /* FeatureHome */; };
+		1FD9214C2F223F9700E334F4 /* Infrastructure in Frameworks */ = {isa = PBXBuildFile; productRef = 1FD9214B2F223F9700E334F4 /* Infrastructure */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1F47D7962F1744C400241B8C /* RickAndMortyHybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyHybrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F47D7AE2F17484D00241B8C /* Infrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Infrastructure; path = Packages/Infrastructure; sourceTree = "<group>"; };
@@ -41,6 +49,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD9214C2F223F9700E334F4 /* Infrastructure in Frameworks */,
+				1FD9214A2F223F9700E334F4 /* FeatureHome in Frameworks */,
+				1FD921482F223F9700E334F4 /* Domain in Frameworks */,
+				1FD921462F223F9700E334F4 /* Data in Frameworks */,
+				1FD921442F223F9700E334F4 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +69,7 @@
 				1F47D7AF2F1765D300241B8C /* Core */,
 				1F47D7AE2F17484D00241B8C /* Infrastructure */,
 				1F47D7982F1744C400241B8C /* RickAndMortyHybrid */,
+				1FD921422F223F9700E334F4 /* Frameworks */,
 				1F47D7972F1744C400241B8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +80,13 @@
 				1F47D7962F1744C400241B8C /* RickAndMortyHybrid.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1FD921422F223F9700E334F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +109,11 @@
 			);
 			name = RickAndMortyHybrid;
 			packageProductDependencies = (
+				1FD921432F223F9700E334F4 /* Core */,
+				1FD921452F223F9700E334F4 /* Data */,
+				1FD921472F223F9700E334F4 /* Domain */,
+				1FD921492F223F9700E334F4 /* FeatureHome */,
+				1FD9214B2F223F9700E334F4 /* Infrastructure */,
 			);
 			productName = RickAndMortyHybrid;
 			productReference = 1F47D7962F1744C400241B8C /* RickAndMortyHybrid.app */;
@@ -163,6 +189,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -191,6 +218,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +375,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FD921432F223F9700E334F4 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		1FD921452F223F9700E334F4 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		1FD921472F223F9700E334F4 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		1FD921492F223F9700E334F4 /* FeatureHome */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FeatureHome;
+		};
+		1FD9214B2F223F9700E334F4 /* Infrastructure */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Infrastructure;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F47D78E2F1744C400241B8C /* Project object */;
 }
