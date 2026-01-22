@@ -10,26 +10,25 @@ import FeatureHome
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
-
+    var appCoordinator: AppCoordinator?
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         AppConfigurator.shared.configure()
-        
         let window = UIWindow(windowScene: windowScene)
-        let homeView = HomeView()
-        let hostingController = UIHostingController(rootView: homeView)
-        hostingController.title = "Rick and Morty"
-        let navigationController = UINavigationController(rootViewController: hostingController)
+        let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
+        appCoordinator = AppCoordinator(navigationController: navigationController)
+        appCoordinator?.start()
         
         window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
     }
-
+    
 }
 

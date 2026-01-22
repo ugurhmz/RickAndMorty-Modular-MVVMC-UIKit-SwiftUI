@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import Domain
 import Core
+import Domain
 import SwiftUI
 
 @MainActor
@@ -15,25 +15,32 @@ public final class HomeViewModel: ObservableObject {
     
     @Published public var state: HomeViewState = .loading
     
+    public var onDetailRequested: ((Character) -> Void)?
+    
     @Inject private var repository: CharacterRepositoryProtocol
     
-    public init(){}
+    public init() {}
     
     public func fetchCharacters() {
         state = .loading
-        
         Task {
             do {
-                let characters = try await repository.fetchCharacters()
-                if characters.isEmpty {
-                    state = .failure("Character List empty!")
+                let result = try await repository.fetchCharacters()
+                if result.isEmpty {
+                    state = .failure("Karakter listesi boş geldi.")
                 } else {
-                    state = .success(characters)
+                    state = .success(result)
                 }
             } catch {
                 state = .failure(error.localizedDescription)
             }
         }
+    }
+    
+    // View'daki butona basılınca bu çalışır
+    public func didSelect(character: Character) {
+        // Coordinator'a "Patron, detay istendi" diye haber verir
+        onDetailRequested?(character)
     }
 }
 
